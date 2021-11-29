@@ -1,0 +1,102 @@
+/**
+ * Student Name: Subash Sapkota
+ * Student Id: C0824340
+ */
+
+
+import java.util.*;
+
+public class CollegeEnrollmentSystem {
+
+	public static void main(String[] args) {
+		// Entry point of a program
+
+	}
+
+}
+
+class StudentADT {
+	/*
+	 * This class contains the template for Student
+	 *  and provides getter and setter methods to access private variables
+	 * */
+	private String firstname;
+	private String lastname;
+	private String studentID;
+	
+	// Getter for Private variables
+	public String getStudentFirstname() {
+		return this.firstname;
+	}
+	
+	public String getStudentLastname() {
+		return this.lastname;
+	}
+	
+	public String getStudentId() {
+		return this.studentID;
+	}
+	
+	// Setter for Private variables
+	public void setStudentFirstname(String firstName) {
+		this.firstname = firstName;
+	}
+	
+	public void setStudentLastname(String lastName) {
+		this.lastname = lastName;
+	}
+	
+	public void setStudentId(String studentId) {
+		this.studentID = studentId;
+	}
+	
+	public String toString() {
+		return "StudentADT class";
+	}
+}
+
+class StudentList {
+	/*
+	 * List of students with cohortId
+	 * */
+	
+    // cohortID is the set of students in one program / term / group
+    // cohortID encodes:  programName, Term {1,2,3,4}, group
+    // sample cohort name: CSD_term3_group2
+	
+	
+	private ArrayList<StudentADT> studentNames;
+	private String cohortID;
+	
+	// Getter
+	public ArrayList<StudentADT> getStudentNames() {
+		return this.studentNames;
+	}
+	
+	public String getCohortID() {
+		return cohortID;
+	}
+		// Setter
+	public void setStudentNames(ArrayList<StudentADT> studentNames) {
+		this.studentNames = studentNames;
+	}
+	
+	public void setCohortId(String cohortId) {
+		this.cohortID = cohortId;
+	}
+	
+	public String toString() {
+		return "StudentList Class";
+	}
+}
+
+class ClassRoom {
+	String classID;
+	String className;
+}
+
+class Program {
+	String programName;
+	String termName;
+	String groupName;
+}

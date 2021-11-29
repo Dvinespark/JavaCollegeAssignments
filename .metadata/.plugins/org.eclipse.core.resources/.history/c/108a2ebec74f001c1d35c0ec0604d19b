@@ -1,0 +1,203 @@
+import java.util.ArrayList;
+
+/*
+ * Name: Subash Sapkota
+ * Student Id: C0824340
+ * */
+
+enum SUIT {
+	RED,
+	BROWN,
+	PINK,
+	YELLOW
+}
+
+public class MainApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FizbinGame game = new FizbinGame();
+		game.initializeGame();
+		game.play();
+	}
+
+}
+
+
+
+class FizbinGame {
+	CardDeck gameDeck;
+	Dealer dealer;
+	ArrayList<Player> players;
+	Boolean winnerFlag = false;
+	Player winner;
+	
+	public void initializeGame() {
+		gameDeck = new CardDeck();
+		players = new ArrayList<Player>();
+		dealer = new Dealer(gameDeck, players);
+	}
+	
+	// Create no of Players
+	public void setPlayers(ArrayList<Player> players) {
+		this.players = players;
+	}
+	
+	public void play() {
+		dealer.shuffleCard();
+		dealer.dealCard();
+		dealer.swapCards(players, new ArrayList<Card>());
+		
+		// If winner logic
+		// set Boolean winnerFlag = True to end game 
+		// and declare winner
+		
+		if (winnerFlag == true) {
+			endGame(winner);
+		}
+		
+	}
+	
+	public void checkWinner() {
+		
+		// create logic to check for winner
+	}
+	
+	public void endGame() {
+		// end the game
+		System.out.println("The winner is " + winner);
+	}
+	
+	
+}
+
+class Card {
+	private SUIT suit;
+	private int value;
+	
+	// Constructor
+	public Card(int value, SUIT suit) {
+		this.suit = suit;
+		this.value = value;
+	}
+	
+	// Getters
+	public int getValue() {
+		return this.value;
+	}
+	
+	public SUIT getSuit() {
+		return this.suit;
+	}
+	
+	// Setters
+	public void setValue(int value ) {
+		this.value = value;
+	}
+	
+	public void setSuite(SUIT suit) {
+		this.suit = suit;
+	}
+	
+	// overriding the existing toString method
+	public String toString() {
+		return " Card (Suit: " + this.suit + " Value: " + this.value + " )";
+	}
+	
+	
+}
+
+class CardDeck {
+	ArrayList<Card> cardDeck;
+	
+	public CardDeck() {
+		this.cardDeck = new ArrayList<Card>();
+		// here generate the Cards
+	}
+	
+	public String toString() {
+		return "cardDeck" + cardDeck;
+	}
+}
+
+class Player {
+	public String name;
+	public ArrayList<Card> hand;
+	
+	// initializing hand with a constructor
+	public Player() {
+		this.hand = new ArrayList<Card>();
+	}
+	
+	// getters
+	public ArrayList<Card> getHand(){
+		return this.hand;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	// setters
+	public void setHand(ArrayList<Card> hand) {
+		this.hand = hand;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	// overriding toString method
+	
+	public String toString() {
+		return "Player " + this.name + " -- hand: " + this.hand;
+	}
+	
+}
+
+class Dealer {
+	CardDeck deck;
+	ArrayList<Player> players;
+	
+	public Dealer(CardDeck deck, ArrayList<Player> players) {
+		this.deck = deck;
+		this.players = players;
+	}
+	
+	public void shuffleCard() {
+		
+	}
+	
+	public void dealCard() {
+		
+	}
+	
+	// Implement logic on how to solve the cards
+	public void swapCards(ArrayList<Player> players, ArrayList<Card> cards) {
+		
+	}
+	
+	
+	// get the current size of a Deck
+	public int getDeckSize() {
+		
+		return deck.cardDeck.size();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

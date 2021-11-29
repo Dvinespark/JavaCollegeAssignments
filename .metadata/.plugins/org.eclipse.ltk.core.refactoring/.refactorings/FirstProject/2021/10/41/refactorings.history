@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Files&apos; to &apos;CICSForRealEstate&apos;&#x0D;&#x0A;- Original project: &apos;FirstProject&apos;&#x0D;&#x0A;- Destination element: &apos;CICSForRealEstate&apos;&#x0D;&#x0A;- Original element: &apos;Files&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move folder" destination="=CICSForRealEstate" element1="Files" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1633354849559" units="0" version="1.0"/>
+</session>

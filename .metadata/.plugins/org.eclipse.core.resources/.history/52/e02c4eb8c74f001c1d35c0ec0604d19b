@@ -1,0 +1,159 @@
+import java.util.ArrayList;
+
+/*
+ * Name: Subash Sapkota
+ * Student Id: C0824340
+ * */
+
+enum SUIT {
+	RED,
+	BROWN,
+	PINK,
+	YELLOW
+}
+
+public class MainApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FizbinGame game = new FizbinGame();
+		game.initializeGame();
+	}
+
+}
+
+
+
+class FizbinGame {
+	CardDeck gameDeck;
+	
+	public void initializeGame() {
+		gameDeck = new CardDeck();
+	}
+	
+}
+
+class Card {
+	private SUIT suit;
+	private int value;
+	
+	// Constructor
+	public Card(int value, SUIT suit) {
+		this.suit = suit;
+		this.value = value;
+	}
+	
+	// Getters
+	public int getValue() {
+		return this.value;
+	}
+	
+	public SUIT getSuit() {
+		return this.suit;
+	}
+	
+	// Setters
+	public void setValue(int value ) {
+		this.value = value;
+	}
+	
+	public void setSuite(SUIT suit) {
+		this.suit = suit;
+	}
+	
+	// overriding the existing toString method
+	public String toString() {
+		return " Card (Suit: " + this.suit + " Value: " + this.value + " )";
+	}
+	
+	
+}
+
+class CardDeck {
+	ArrayList<Card> cardDeck;
+	
+	public CardDeck() {
+		this.cardDeck = new ArrayList<Card>();
+		// here generate the Cards
+	}
+	
+	public String toString() {
+		return "cardDeck" + cardDeck;
+	}
+}
+
+class Player {
+	public String name;
+	public ArrayList<Card> hand;
+	
+	// initializing hand with a constructor
+	public Player() {
+		this.hand = new ArrayList<Card>();
+	}
+	
+	// getters
+	public ArrayList<Card> getHand(){
+		return this.hand;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	// setters
+	public void setHand(ArrayList<Card> hand) {
+		this.hand = hand;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	// overriding toString method
+	
+	public String toString() {
+		return "Player " + this.name + " -- hand: " + this.hand;
+	}
+	
+}
+
+class Dealer {
+	CardDeck deck =  new CardDeck();
+	
+	public void shuffleCard() {
+		
+	}
+	
+	public void dealCard() {
+		
+	}
+	
+	// Implement logic on how to solve the cards
+	public void swapCards(ArrayList<Player> players, ArrayList<Card> cards) {
+		
+	}
+	
+	
+	// get the current size of a Deck
+	public int getDeckSize() {
+		
+		return deck.cardDeck.size();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
