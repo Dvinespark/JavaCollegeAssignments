@@ -4,12 +4,12 @@ import java.io.*;
 public class MainApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Hello world!");
 		
 		HyperVisor programController = new HyperVisor();
-		programController.Director();
+//		programController.Director();
 //		PracticeCode practiceCode = new PracticeCode();
 //		practiceCode.Test();
+		programController.Example();
 
 	}
 
@@ -24,7 +24,93 @@ class HyperVisor {
 		// Import our Data File
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void Example() {
+		// Write your code here
+		System.out.println("Hello world");
+		int sum = 0;
+		for (int j = 5; j>0; j--) {
+			sum += j;
+		}
+		System.out.println(sum);
+		
+		
+		
+		
+		
+		
+		
+		// ENd your code here
+	}
+	public static int Hello() {
+		return 1;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

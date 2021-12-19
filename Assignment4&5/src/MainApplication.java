@@ -21,6 +21,8 @@ public class MainApplication {
 		FizbinGame game = new FizbinGame();
 		game.initializeGame();
 		game.play();
+		A a = new A();
+		System.out.println(a.i);
 	}
 
 }
@@ -204,10 +206,12 @@ class Dealer {
 
 
 
-
-
-
-
+class A {
+	{
+		i = 10;
+	}
+	int i;
+}
 
 
 
